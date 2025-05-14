@@ -169,50 +169,6 @@ When an authorized NFC card is detected, the system enables both Samba (SMB) and
    ```
    Place an NFC card on the reader. The script should output the card's UID (e.g., "79 DE 3F 02").
 
-## Rust File Sharing System
-
-1. Create a new Rust project:
-   ```bash
-   mkdir -p ~/rust-nfc-fileshare
-   cd ~/rust-nfc-fileshare
-   cargo init
-   ```
-
-2. Update the Cargo.toml file:
-   ```bash
-   nano Cargo.toml
-   ```
-
-3. Add these dependencies:
-   ```toml
-   [package]
-   name = "nfc-fileshare"
-   version = "0.1.0"
-   edition = "2021"
-
-   [dependencies]
-   chrono = "0.4"
-   ctrlc = "3.2"
-   ```
-
-4. Replace the main.rs content:
-   ```bash
-   nano src/main.rs
-   ```
-
-5. Add the Rust code from the [Complete Rust Implementation](#complete-rust-implementation) section below.
-
-6. Build the project:
-   ```bash
-   cargo build --release
-   ```
-
-7. Run the file sharing system:
-   ```bash
-   sudo ./target/release/nfc-fileshare
-   ```
-
-8. Test the system by placing your NFC card on the reader. The system should output "File sharing ENABLED" and provide connection details.
 
 ## Mobile Device Connection
 
